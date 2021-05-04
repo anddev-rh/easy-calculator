@@ -10,8 +10,11 @@
 
 
 body {
+  display: grid;
+  justify-content: center;
   text-align: center;
   align-content: center;
+  background-color: #1b262c;
 }
 
 form {
@@ -19,25 +22,22 @@ form {
 }
 
 .calculator {
-  background-color: #5c5757;
-  width: 600px;
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%); 
-  padding: 2px; 
+  margin-top: 200px;
   display: grid;
+  background-color: #1b262c; 
+  height: 500px; 
+  width: 300px;
+  
   }
 
 .screen {
-  background-color: #efecec;
-  width: 99%;
+  background-color: #1b262c;
+  border: 0.5px solid #3282b8;
+  color: white;
+  width: -webkit-fill-available;
   height: 5rem;
   outline: none;
-  border: 0;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 25px;
   }
   
   .buttons {
@@ -48,13 +48,30 @@ form {
 
   .btn{
     font-size: 30px;
-    color: #efecec;
+    color: white;
+    border: 0.5px solid #3282b8;
   }
 
   .btn-black {
-    background-color: black;
+    background-color: #1b262c;
   }
 
   .btn-blue {
-    background-color: blue;
+    background-color: #0f4c75;
   } 
+
+  .btn-light {
+    background-color: #bbe1fa;
+    color: #1b262c;
+  }
+
+  .btn:hover {
+    background-color: #bbe1fa;
+    color: #1b262c;
+    box-shadow: 0 0 3px 1px white;
+    border: none;
+  }
+
+  .btn-light:hover {
+    background-color: white;
+  }
