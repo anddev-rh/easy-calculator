@@ -4,6 +4,7 @@
   const equal = document.querySelector('.btn-equal')
   const clear = document.querySelector('.btn-clear')
   let screen = document.querySelector('.screen')
+  screen.disabled = true;
 
   numbers.forEach( (number) => {
     number.addEventListener('click', getNumber = (nmber) => {
@@ -14,16 +15,18 @@
     screen.value += newNumber}
   })
 
-    screen.addEventListener('keydown', (e) => {
+/*     screen.addEventListener('keydown', (e) => {
       if(e.key === 'Enter') {
         if(screen.value === '') {
           screen.value = 'Please enter a value'
         } else {
           let output = eval(screen.value)
           screen.value = output;
+          screen.disabled = true;
+        
         }
       }
-    })
+    }) */
 
     equal.addEventListener('click', calculateTotal = () => {
       
